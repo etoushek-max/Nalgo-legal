@@ -1,1 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nalgo — Privacy Policy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+  <a class="backlink" href="index.html">← Nalgo Legal</a>
+  <h1>Privacy Policy</h1>
+</header>
+
+<main>
+  <p class="updated">Last updated: 8 September 2026</p>
+
+  <p>
+    Nalgo (“we”, “us”) is operated by
+    <span class="todo">[YOUR NAME / COMPANY]</span>. This policy explains what
+    personal information the app collects, why, how it is stored, who can see
+    it, and the choices you have. Questions:
+    <a href="mailto:nalgosupport@gmail.com">nalgosupport@gmail.com</a>.
+  </p>
+
+  <h2>Browsing without an account</h2>
+  <p>
+    On the web, you can browse public community content without signing up.
+    While signed out we do not create an account for you or collect profile
+    information. You must create an account to interact — to post, like,
+    comment, message, or follow people.
+  </p>
+
+  <h2>What we collect</h2>
+  <p>When you create an account and use Nalgo, we collect:</p>
+  <ul>
+    <li>
+      <strong>Account credentials</strong> — your email address and a password,
+      handled by our authentication provider (Supabase). Your password is stored
+      only as a secure hash; we never see it in plain text. Your email is used
+      for sign-in and account confirmation and is never shown to other users.
+    </li>
+    <li>
+      <strong>Date of birth</strong> — collected at sign-up to confirm you are
+      old enough to use Nalgo. It is stored against your login, not on your
+      public profile, and is never shown to other users.
+    </li>
+    <li>
+      <strong>Agreement record</strong> — the version of our Terms you agreed to
+      and the date you agreed.
+    </li>
+    <li>
+      <strong>Profile information</strong> — a @handle (auto-generated at
+      sign-up, which you can change), and any optional display name, bio,
+      location, and profile picture you add.
+    </li>
+    <li>
+      <strong>Interests</strong> — the communities and topics you pick, which
+      power discovery of people with shared interests.
+    </li>
+    <li>
+      <strong>Content you create</strong> — posts, comments, community chat
+      messages, and any images or videos you attach, stored in Supabase Storage.
+    </li>
+    <li><strong>Connections</strong> — your friend and Inner Circle relationships.</li>
+    <li><strong>Direct messages</strong> — the private messages you send and receive.</li>
+    <li>
+      <strong>Moderation records</strong> — users you block, reports you submit,
+      and reports submitted about you. A report about an account is kept even if
+      that account is deleted, so that the record of it survives.
+    </li>
+    <li>
+      <strong>Crash and error diagnostics</strong> — when the app crashes or hits
+      an error, Sentry receives a diagnostic report that can include your device
+      model, operating system version, app version, and a stack trace.
+      <span class="todo">[CONFIRM whether you have Sentry configured to attach user IDs — if so, say so here.]</span>
+    </li>
+  </ul>
+
+  <p>
+    We do <strong>not</strong> use third-party advertising, and we do not use
+    analytics or tracking SDKs for profiling.
+  </p>
+
+  <h3>Stored on your device only</h3>
+  <p>
+    Some things are stored locally on your device and are not sent to our
+    servers: your tab layout and visibility choices, your personal community
+    colour customisations, your appearance/theme preference, and locally cached
+    engagement such as which posts you have liked and your message read markers.
+  </p>
+
+  <h2>Permissions the app asks for</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Permission</th><th>Why</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Photo library</td>
+          <td>So you can attach photos and videos to a post. We only receive the files you pick.</td>
+        </tr>
+        <tr>
+          <td>Camera</td>
+          <td>So you can take a photo or video for a post.</td>
+        </tr>
+        <tr>
+          <td>Microphone</td>
+          <td>So videos you record have sound.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    You can decline any of these and keep using the rest of the app. We do not
+    access your location, contacts, or microphone outside of recording a video.
+  </p>
+
+  <h2>Who can see your information</h2>
+  <ul>
+    <li><strong>Email and date of birth</strong> — only you. Never shown to other users.</li>
+    <li><strong>Profile fields</strong> (@handle, display name, bio, location, avatar) — visible to any signed-in user, since they power people discovery.</li>
+    <li><strong>Public community posts and chat</strong> — visible to anyone signed in; on the web, also to signed-out visitors.</li>
+    <li><strong>Inner Circle posts</strong> — visible only to the people you place in your Inner Circle.</li>
+    <li><strong>Direct messages</strong> — visible only to you and the person you are messaging.</li>
+    <li><strong>Blocks and reports</strong> — not shown to the people they concern.</li>
+    <li><strong>Moderators</strong> — our moderators can see content that has been reported, in order to review it.</li>
+  </ul>
+  <p>
+    These visibility rules are enforced on the server with row-level security,
+    not only in the app.
+  </p>
+
+  <h2>How your information is stored and protected</h2>
+  <p>
+    Your data is stored using <strong>Supabase</strong> (PostgreSQL database,
+    authentication, and file storage). Access is protected by row-level security
+    policies, connections use HTTPS/TLS, and passwords are hashed by the
+    authentication provider. No method of transmission or storage is completely
+    secure, but we take reasonable measures to protect your information.
+  </p>
+  <p>
+    <span class="todo">[STATE where your Supabase project is hosted — e.g. “data is stored in the EU (Frankfurt)”. Required for GDPR transfer disclosures.]</span>
+  </p>
+
+  <h2>Third parties</h2>
+  <ul>
+    <li><strong>Supabase</strong> — database, authentication, and file storage.</li>
+    <li><strong>Sentry</strong> — crash and error reporting.</li>
+    <li><strong>Expo</strong> — app builds and over-the-air updates.</li>
+    <li><span class="todo">[ADD any others you introduce — push notifications, an image CDN, email delivery.]</span></li>
+  </ul>
+  <p>We do not sell your personal information.</p>
+
+  <h2>Your choices and rights</h2>
+  <ul>
+    <li><strong>Edit your profile</strong> at any time in the app.</li>
+    <li>
+      <strong>Delete your account</strong> — Profile → Account Settings → Delete
+      account. This permanently removes your profile, posts, comments,
+      attachments, interests, friendships, and direct messages (both sent and
+      received) from our servers.
+    </li>
+    <li>
+      Depending on where you live, you may have additional rights to access,
+      correct, export, restrict, or object to the processing of your personal
+      data, and to lodge a complaint with your data protection authority. To
+      exercise any of these, contact
+      <a href="mailto:nalgosupport@gmail.com">nalgosupport@gmail.com</a>. We respond within
+      <span class="todo">[RESPONSE TIME — 30 days is the usual commitment]</span>.
+    </li>
+  </ul>
+  <p>
+    <span class="todo">[GDPR: state your legal basis for each purpose — typically contract for running the account, legitimate interests for safety and moderation, consent for anything optional.]</span>
+  </p>
+
+  <h2>Data retention</h2>
+  <p>
+    We keep your information for as long as your account exists. When you delete
+    your account, the data above is removed. Backups, if any, are retained for
+    <span class="todo">[RETENTION PERIOD — e.g. 30 days]</span> before being
+    overwritten.
+  </p>
+  <p>
+    Moderation records — reports, suspensions, and the content they concern —
+    are kept for <span class="todo">[PERIOD]</span> after an account is deleted,
+    so that a banned user cannot erase the record by deleting their account.
+  </p>
+
+  <h2>Children</h2>
+  <p>
+    Nalgo is not directed to children under 13, and we do not knowingly collect
+    personal information from them. If you believe a child has provided us
+    information, contact
+    <a href="mailto:nalgosupport@gmail.com">nalgosupport@gmail.com</a> and we will delete
+    it.
+  </p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    We may update this policy from time to time. We will update the “Last
+    updated” date above and, for material changes, provide a more prominent
+    notice in the app.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Questions or requests:
+    <a href="mailto:nalgosupport@gmail.com">nalgosupport@gmail.com</a>
+  </p>
+
+  <div class="callout">
+    <p>
+      <strong>Before publishing:</strong> replace every highlighted placeholder
+      above, confirm the third-party list matches what the app actually ships,
+      and have someone qualified review this for your jurisdiction (GDPR, CCPA,
+      and the app stores' own requirements). This is a starting draft, not legal
+      advice.
+    </p>
+  </div>
+</main>
+
+<footer>
+  <p><a href="index.html">Nalgo Legal</a> · <a href="terms.html">Terms &amp; Community Guidelines</a></p>
+</footer>
+
+</body>
+</html>
