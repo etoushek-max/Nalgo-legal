@@ -7,15 +7,15 @@ privacy policy. Plain static HTML, no build step.
 
 1. Repo → **Settings → Pages** → Source: **Deploy from a branch**, branch
    `main`, folder `/ (root)`.
-2. The pages appear at <https://etoushek-max.github.io/nalgo-legal/>.
+2. The pages appear at <https://etoushek-max.github.io/Nalgo-legal/>.
 
 ## Then wire the URLs back into the app
 
 In the Nalgo app repo, `lib/legal.ts`:
 
 ```ts
-export const PRIVACY_POLICY_URL = 'https://etoushek-max.github.io/nalgo-legal/privacy.html';
-export const TERMS_OF_SERVICE_URL = 'https://etoushek-max.github.io/nalgo-legal/terms.html';
+export const PRIVACY_POLICY_URL = 'https://etoushek-max.github.io/Nalgo-legal/privacy.html';
+export const TERMS_OF_SERVICE_URL = 'https://etoushek-max.github.io/Nalgo-legal/terms.html';
 ```
 
 Both URLs also go into the store listings: App Store Connect wants a privacy
