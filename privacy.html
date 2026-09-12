@@ -14,11 +14,11 @@
 </header>
 
 <main>
-  <p class="updated">Last updated: 8 September 2026</p>
+  <p class="updated">Last updated: 11 September 2026</p>
 
   <p>
     Nalgo (“we”, “us”) is operated by
-    <span class="todo">[YOUR NAME / COMPANY]</span>. This policy explains what
+    Ethan Toushek and Thomas Gaudet. This policy explains what
     personal information the app collects, why, how it is stored, who can see
     it, and the choices you have. Questions:
     <a href="mailto:nalgosupport@gmail.com">nalgosupport@gmail.com</a>.
@@ -26,9 +26,17 @@
 
   <h2>You need an account</h2>
   <p>
-    Nalgo requires an account. Signed out, the app shows only the sign-in and
-    sign-up screens — there is no browsable content, and we do not collect
-    profile information about you before you register.
+    Nalgo requires an account to use. Signed out, the app shows only the sign-in
+    and sign-up screens — there is nothing to browse, no feed, no search, and
+    we do not collect profile information about you before you register.
+  </p>
+  <p>
+    There is one exception. Any Nalgo user can create a web link for a public
+    community post and send it to someone who does not have Nalgo. Opening that
+    link shows that single post, read-only, and nothing else — no feed, no
+    profile, no comments, no way to move to another post. Visiting a shared link
+    does not create an account and we do not build a profile of you for doing
+    it. See <a href="#shared-links">Shared links</a> below.
   </p>
 
   <h2>What we collect</h2>
@@ -42,8 +50,8 @@
     </li>
     <li>
       <strong>Date of birth</strong> — collected at sign-up to confirm you are
-      old enough to use Nalgo. It is stored against your login, not on your
-      public profile, and is never shown to other users.
+      at least 17. It is stored against your login, not on your public profile,
+      and is never shown to other users.
     </li>
     <li>
       <strong>Agreement record</strong> — the version of our Terms you agreed to
@@ -64,6 +72,13 @@
     </li>
     <li><strong>Connections</strong> — your friend and Inner Circle relationships.</li>
     <li><strong>Direct messages</strong> — the private messages you send and receive.</li>
+    <li>
+      <strong>Device push token</strong> — only if you turn on push
+      notifications. This is an identifier issued by Expo for the app on that
+      particular device, which Expo maps to the underlying Apple or Google
+      token when it delivers, and it is what lets us send a notification to it. It is not linked to anything else about your device, and it is
+      deleted when you turn notifications off, sign out, or delete your account.
+    </li>
     <li>
       <strong>Moderation records</strong> — users you block, reports you submit,
       and reports submitted about you. A report about an account is kept even if
@@ -103,6 +118,10 @@
           <td>Microphone</td>
           <td>So videos you record have sound.</td>
         </tr>
+        <tr>
+          <td>Notifications</td>
+          <td>So we can tell you about a direct message or a friend request while the app is closed. Only asked for when you turn notifications on in Settings.</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -115,7 +134,7 @@
   <ul>
     <li><strong>Email and date of birth</strong> — only you. Never shown to other users.</li>
     <li><strong>Profile fields</strong> (@handle, display name, bio, location, avatar) — visible to any signed-in user, since they power people discovery.</li>
-    <li><strong>Public community posts and chat</strong> — visible to anyone signed in; on the web, also to signed-out visitors.</li>
+    <li><strong>Public community posts and chat</strong> — visible to anyone signed in. A post is <em>not</em> visible to signed-out visitors unless someone creates a share link for it, which any signed-in user can do for any public community post. You can revoke a link to your own post.</li>
     <li><strong>Inner Circle posts</strong> — visible only to the people you place in your Inner Circle.</li>
     <li><strong>Direct messages</strong> — visible only to you and the person you are messaging.</li>
     <li><strong>Blocks and reports</strong> — not shown to the people they concern.</li>
@@ -135,16 +154,81 @@
     secure, but we take reasonable measures to protect your information.
   </p>
   <p>
-    <span class="todo">[STATE where your Supabase project is hosted — e.g. “data is stored in the EU (Frankfurt)”. Required for GDPR transfer disclosures.]</span>
+    Our Supabase project is hosted in the United States — AWS region
+    <code>us-east-2</code> (Ohio) — and your data is stored and processed there.
+    If you use Nalgo from outside the United States, including from the European
+    Economic Area or the United Kingdom, your information is transferred to the
+    United States, where data protection law differs from that of your own
+    country. Where such a transfer is subject to UK or EU law, it is covered by
+    the Standard Contractual Clauses in Supabase’s data processing agreement.
   </p>
 
   <h2>Third parties</h2>
   <ul>
     <li><strong>Supabase</strong> — database, authentication, and file storage.</li>
-    <li><strong>Expo</strong> — app builds and over-the-air updates.</li>
-    <li><span class="todo">[ADD any others you introduce — push notifications, an image CDN, email delivery.]</span></li>
+    <li><strong>Expo</strong> — app builds, over-the-air updates, and the push
+      notification service that forwards our notifications to Apple and Google.</li>
+    <li><strong>Apple and Google</strong> — the push notification services built
+      into iOS and Android. A notification we send passes through them to reach
+      your device. This only applies if you turn notifications on.</li>
   </ul>
+  <p>
+    That is the complete list. Nalgo contains no analytics, advertising, or
+    crash-reporting SDKs, and no third-party trackers. Account confirmation and
+    password reset emails are sent by Supabase on our behalf, to the address you
+    signed up with.
+  </p>
   <p>We do not sell your personal information.</p>
+
+  <h2 id="shared-links">Shared links</h2>
+  <p>
+    You can create a web link for a public community post, so you can send it to
+    someone who does not use Nalgo. The link contains a long random token;
+    it is not guessable and the links cannot be listed or enumerated. We do not
+    ask search engines to index them.
+  </p>
+  <p>
+    A link is nonetheless a bearer key: anyone who has it can open the post, and
+    anyone your recipient forwards it to can open it as well. Do not create one
+    for something you would not be comfortable being passed on.
+  </p>
+  <p>
+    What a visitor sees is that one post — its text, its images or video, its
+    tags, and the display name, @handle and avatar of the author. They do not
+    get your account id, your other posts, your profile page, comments, likes,
+    or any way to navigate anywhere else in Nalgo.
+  </p>
+  <p>
+    Any signed-in Nalgo user can create a link for a public community post —
+    their own or someone else's. This is possible because a community post is
+    already readable by every signed-in Nalgo user; a link does not widen who
+    may read it inside Nalgo, it lets one specific person read it without
+    signing up.
+  </p>
+  <p>
+    If someone links your post and you would rather they had not, you can revoke
+    that link. A link also stops working as soon as the post is deleted,
+    switched out of the public feed, or the account is suspended or deleted.
+    Inner Circle posts, Niche posts and direct messages cannot be linked at all.
+  </p>
+
+  <h2>Notifications</h2>
+  <p>
+    Push notifications are off until you turn them on. When they are on, we send
+    you a notification when someone sends you a direct message or adds you.
+  </p>
+  <p>
+    A notification carries the sender’s name and the first part of their
+    message, so that content passes through Expo and then through Apple’s or
+    Google’s push service on its way to your device, and it can appear on your
+    lock screen. If that matters to you, you can turn off the message type you
+    do not want in Settings, turn notifications off altogether, or hide
+    notification previews in your device settings.
+  </p>
+  <p>
+    Turning notifications off in Settings deletes that device’s push token from
+    our servers. Signing out or deleting your account does the same.
+  </p>
 
   <h2>Your choices and rights</h2>
   <ul>
@@ -163,31 +247,55 @@
       data, and to lodge a complaint with your data protection authority. To
       exercise any of these, contact
       <a href="mailto:nalgosupport@gmail.com">nalgosupport@gmail.com</a>. We respond within
-      <span class="todo">[RESPONSE TIME — 30 days is the usual commitment]</span>.
+      30 days.
     </li>
   </ul>
+  <h2>Legal bases for processing</h2>
   <p>
-    <span class="todo">[GDPR: state your legal basis for each purpose — typically contract for running the account, legitimate interests for safety and moderation, consent for anything optional.]</span>
+    If you are in the European Economic Area or the United Kingdom, we rely on
+    the following legal bases under the GDPR:
   </p>
+  <ul>
+    <li>
+      <strong>Performance of a contract.</strong> Creating and running your
+      account, showing your profile and posts to other people, and delivering
+      your messages — the service you signed up for.
+    </li>
+    <li>
+      <strong>Legitimate interests.</strong> Keeping Nalgo safe and usable:
+      handling reports, moderating content, enforcing the Terms, preventing
+      abuse and spam, and keeping the service secure and working.
+    </li>
+    <li>
+      <strong>Consent.</strong> Anything optional you explicitly opt into, such
+      as access to your photos and camera roll when you upload an image or
+      video. You can withdraw that consent at any time in your device settings.
+    </li>
+    <li>
+      <strong>Legal obligation.</strong> Where we have to keep or disclose
+      information to comply with the law.
+    </li>
+  </ul>
 
   <h2>Data retention</h2>
   <p>
     We keep your information for as long as your account exists. When you delete
     your account, the data above is removed. Backups, if any, are retained for
-    <span class="todo">[RETENTION PERIOD — e.g. 30 days]</span> before being
+    up to 30 days before being
     overwritten.
   </p>
   <p>
     Moderation records — reports, suspensions, and the content they concern —
-    are kept for <span class="todo">[PERIOD]</span> after an account is deleted,
+    are kept for two years after an account is deleted,
     so that a banned user cannot erase the record by deleting their account.
   </p>
 
-  <h2>Children</h2>
+  <h2>Age</h2>
   <p>
-    Nalgo is not directed to children under 13, and we do not knowingly collect
-    personal information from them. If you believe a child has provided us
-    information, contact
+    Nalgo is for people aged 17 and over. It is not directed to children or to
+    younger teenagers, and we do not knowingly collect personal information
+    from anyone under 17. If you believe someone under 17 has created an
+    account or given us information, contact
     <a href="mailto:nalgosupport@gmail.com">nalgosupport@gmail.com</a> and we will delete
     it.
   </p>
