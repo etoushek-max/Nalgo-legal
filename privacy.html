@@ -14,7 +14,7 @@
 </header>
 
 <main>
-  <p class="updated">Last updated: 11 September 2026</p>
+  <p class="updated">Last updated: 13 September 2026</p>
 
   <p>
     Nalgo (“we”, “us”) is operated by
@@ -134,9 +134,12 @@
   <ul>
     <li><strong>Email and date of birth</strong> — only you. Never shown to other users.</li>
     <li><strong>Profile fields</strong> (@handle, display name, bio, location, avatar) — visible to any signed-in user, since they power people discovery.</li>
+    <li><strong>Likes</strong> — the interests you add are visible to any signed-in user, since they are how Nalgo matches people with shared interests.</li>
     <li><strong>Public community posts and chat</strong> — visible to anyone signed in. A post is <em>not</em> visible to signed-out visitors unless someone creates a share link for it, which any signed-in user can do for any public community post. You can revoke a link to your own post.</li>
+    <li><strong>Niches</strong> — a Niche’s name and the likes it is about are visible to any signed-in user, and <em>any signed-in user can join a Niche</em>. Once they join, they can read its posts and chat. Treat what you share in a Niche as visible to anyone who shares those likes, not as private.</li>
     <li><strong>Inner Circle posts</strong> — visible only to the people you place in your Inner Circle.</li>
     <li><strong>Direct messages</strong> — visible only to you and the person you are messaging.</li>
+    <li><strong>Photos and videos</strong> added to Inner Circle posts, Niches, and direct messages from 13 September 2026 onward are stored privately and can only be opened by people who can see the post or message they belong to, through links that expire after two hours. Ones added before that date are stored at an unlisted web address that anyone who has the exact link can open.</li>
     <li><strong>Blocks and reports</strong> — not shown to the people they concern.</li>
     <li><strong>Moderators</strong> — our moderators can see content that has been reported, in order to review it.</li>
   </ul>
@@ -166,6 +169,12 @@
   <h2>Third parties</h2>
   <ul>
     <li><strong>Supabase</strong> — database, authentication, and file storage.</li>
+    <li><strong>Vercel</strong> — hosts the Nalgo website (nalgo.ca), including
+      shared-post links and the password reset page. Like any web host, it
+      receives your IP address and basic request details when you visit.</li>
+    <li><strong>Resend</strong> — sends account emails, such as sign-up
+      confirmation and password reset, from no-reply@nalgo.ca. It receives the
+      email address a message is sent to and the message itself.</li>
     <li><strong>Expo</strong> — app builds, over-the-air updates, and the push
       notification service that forwards our notifications to Apple and Google.</li>
     <li><strong>Apple and Google</strong> — the push notification services built
@@ -175,8 +184,8 @@
   <p>
     That is the complete list. Nalgo contains no analytics, advertising, or
     crash-reporting SDKs, and no third-party trackers. Account confirmation and
-    password reset emails are sent by Supabase on our behalf, to the address you
-    signed up with.
+    password reset emails are sent through Resend on our behalf, to the address
+    you signed up with.
   </p>
   <p>We do not sell your personal information.</p>
 
@@ -250,6 +259,32 @@
       30 days.
     </li>
   </ul>
+  <h2>If you are in Canada</h2>
+  <p>
+    Nalgo is operated from Ontario, Canada, and handles personal information in
+    line with Canada’s <em>Personal Information Protection and Electronic
+    Documents Act</em> (PIPEDA). We have a Privacy Officer who is accountable for
+    how Nalgo handles personal information. You can reach them at
+    <a href="mailto:nalgosupport@gmail.com">nalgosupport@gmail.com</a>
+    (put “Privacy” in the subject line).
+  </p>
+  <ul>
+    <li>
+      You can ask to see the personal information we hold about you, and to have
+      it corrected if it is wrong. We respond within 30 days.
+    </li>
+    <li>
+      You can withdraw your consent at any time, subject to legal or contractual
+      restrictions — for example, by turning off notifications or deleting your
+      account.
+    </li>
+    <li>
+      If you are not satisfied with how we handle a privacy concern, you can
+      complain to the
+      <a href="https://www.priv.gc.ca/en/report-a-concern/">Office of the Privacy Commissioner of Canada</a>.
+    </li>
+  </ul>
+
   <h2>Legal bases for processing</h2>
   <p>
     If you are in the European Economic Area or the United Kingdom, we rely on
@@ -273,7 +308,8 @@
     </li>
     <li>
       <strong>Legal obligation.</strong> Where we have to keep or disclose
-      information to comply with the law.
+      information to comply with the law — for example, reporting child sexual
+      abuse material to the authorities and preserving the related data.
     </li>
   </ul>
 
@@ -288,6 +324,13 @@
     Moderation records — reports, suspensions, and the content they concern —
     are kept for two years after an account is deleted,
     so that a banned user cannot erase the record by deleting their account.
+    When something is reported, a private copy of it is kept for that period
+    even if it is later removed or deleted. Only our moderators can access it.
+  </p>
+  <p>
+    Where the law requires us to preserve information for longer — for example,
+    after reporting child sexual abuse material to the police — we keep it for as
+    long as that requires.
   </p>
 
   <h2>Age</h2>
