@@ -14,7 +14,7 @@
 </header>
 
 <main>
-  <p class="updated">Last updated: 14 September 2026</p>
+  <p class="updated">Last updated: 27 September 2026</p>
 
   <p>
     Nalgo (“we”, “us”) is operated by
@@ -68,7 +68,7 @@
     </li>
     <li>
       <strong>Content you create</strong> — posts, comments, community chat
-      messages, and any images or videos you attach, stored in Supabase Storage.
+      messages, and any images or videos you attach, stored with Cloudflare R2.
     </li>
     <li><strong>Connections</strong> — your friend and Inner Circle relationships.</li>
     <li><strong>Direct messages</strong> — the private messages you send and receive.</li>
@@ -95,8 +95,9 @@
   <p>
     Some things are stored locally on your device and are not sent to our
     servers: your tab layout and visibility choices, your personal community
-    colour customisations, your appearance/theme preference, and locally cached
-    engagement such as which posts you have liked and your message read markers.
+    colour customisations, your appearance/theme preference, and your message
+    read markers. The app also keeps a copy of which posts you have liked, so
+    buttons show straight away; the record itself is kept on our servers.
   </p>
 
   <h2>Permissions the app asks for</h2>
@@ -151,8 +152,11 @@
 
   <h2>How your information is stored and protected</h2>
   <p>
-    Your data is stored using <strong>Supabase</strong> (PostgreSQL database,
-    authentication, and file storage). Access is protected by row-level security
+    Your account and everything you write are stored using
+    <strong>Supabase</strong> (PostgreSQL database and authentication). Photos and
+    videos are stored with <strong>Cloudflare R2</strong>. Private ones can only be
+    opened through links that our server issues after Supabase has confirmed you
+    may see the post or message they belong to. Access is protected by row-level security
     policies, connections use HTTPS/TLS, and passwords are hashed by the
     authentication provider. No method of transmission or storage is completely
     secure, but we take reasonable measures to protect your information.
@@ -160,16 +164,23 @@
   <p>
     Our Supabase project is hosted in the United States — AWS region
     <code>us-east-2</code> (Ohio) — and your data is stored and processed there.
+    Photos and videos are stored by Cloudflare in Eastern North America.
     If you use Nalgo from outside the United States, including from the European
     Economic Area or the United Kingdom, your information is transferred to the
     United States, where data protection law differs from that of your own
     country. Where such a transfer is subject to UK or EU law, it is covered by
-    the Standard Contractual Clauses in Supabase’s data processing agreement.
+    the Standard Contractual Clauses in Supabase’s and Cloudflare’s data
+    processing agreements.
   </p>
 
   <h2>Third parties</h2>
   <ul>
-    <li><strong>Supabase</strong> — database, authentication, and file storage.</li>
+    <li><strong>Supabase</strong> — database and authentication.</li>
+    <li><strong>Cloudflare</strong> — stores photos and videos (R2), runs the
+      service that accepts uploads and issues links to private media, and
+      provides the domain name service for nalgo.ca. Like any web host, it
+      receives your IP address and basic request details when your app loads a
+      picture.</li>
     <li><strong>Vercel</strong> — hosts the Nalgo website (nalgo.ca), including
       shared-post links and the password reset page. Like any web host, it
       receives your IP address and basic request details when you visit.</li>
